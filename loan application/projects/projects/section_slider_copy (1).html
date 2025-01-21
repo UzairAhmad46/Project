@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fi-FI">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+
+    <!-- google font css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://yrityslainaamo.fi/uty-content/themes/theme3/aos/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://yrityslainaamo.fi/uty-content/themes/theme3/font-awesome/v6/brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://yrityslainaamo.fi/uty-content/themes/theme3/font-awesome/v6/regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://yrityslainaamo.fi/uty-content/themes/theme3/font-awesome/v6/solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://yrityslainaamo.fi/uty-content/themes/theme3/font-awesome/v6/fontawesome.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://yrityslainaamo.fi/uty-content/sites/yrityslainaamo/css/tailwind/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://yrityslainaamo.fi/uty-content/themes/theme3/slider.css"
+    />
+    <link rel="stylesheet" href="/projects/projects/slider-overrides.css" />
+
+    <title>
+      Yrityslaina | Kilpailuta yrityslaina jopa 10M€ asti | Yrityslainaamo
+    </title>
+    <meta
+      name="description"
+      content="Kilpailuta yrityslaina helposti yhdellä hakemuksella. Vakuudeton rahoitus 500 000€ asti, vakuudellinen 10M€ asti. Nopea päätös ja rahat heti tilille."
+    />
+    <meta name="keywords" content="" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://yrityslainaamo.fi/favicon.ico"
+    />
+  </head>
+  <body>
+    <main>
+      <section
+        id="slider_section"
+        class="section banner relative overflow-hidden pt-0 sm:pt-20 before:z-10 after:z-10"
+      >
+        <div class="container relative z-30">
+          <div class="row items-center">
+            <div class="mx-auto md:pt-24 sm:pt-0"></div>
+            <div class="mx-auto md:pt-24 sm:pt-0 lg:col-6 lg:pt-0">
+              <div
+                data-aos="fade-up-sm"
+                id="loan_slider_container"
+                class="lg:mt-0 business-loan"
+                data-type="business"
+              >
+                <div class="wp-lainata-col-left" id="wp-lainata-section-slider">
+                  <div class="wp-lainata-form">
+                    <div class="tabs">
+                      <div class="tab active" onclick="showTab('personal')">
+                        Personal Loans
+                      </div>
+                      <div class="tab" onclick="showTab('corporate')">
+                        Corporate Loans
+                      </div>
+                    </div>
+
+                    <div
+                      class="wp-lainata-range-area wp-lainata-range-border pt-2"
+                    >
+                      <label class="wp-lainata-label">
+                        <span class="wp-lainata-left-amount">Lainasumma</span>
+                        <span class="label-input-field">
+                          <span
+                            class="wp-lainata-right-amount"
+                            id="wp-current-lainasumma"
+                            onclick="editLainasumma(this)"
+                            >500</span
+                          >
+                          <input
+                            type="number"
+                            id="edit-lainasumma"
+                            class="hidden text-primary-100"
+                            value="500"
+                            onblur="updateLainasumma(this)"
+                          />
+                        </span>
+                      </label>
+                      <div class="slide">
+                        <div class="form-group" style="margin-bottom: 8px">
+                          <div
+                            class="slider-lainasumma"
+                            id="slider-lainasumma"
+                            data-value="500"
+                            data-interest="0.104"
+                          ></div>
+                          <input
+                            type="hidden"
+                            id="sliderFirst"
+                            name="FirstSlider"
+                            value="0"
+                          />
+                        </div>
+                        <div class="wp-lainata-amount-wrap">
+                          <span class="slider-fixed-info"
+                            >You can get up to $70,000 loan.</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wp-lainata-range-area">
+                      <label class="wp-lainata-label pt-2">
+                        <span class="wp-lainata-left-amount">Laina-aika</span>
+                        <span class="label-input-field">
+                          <span
+                            class="wp-lainata-right-amount wp-lainata-green text-primary-100 hover:text-primary-500"
+                            id="wp-current-lainaaika"
+                            onclick="editLainaaika(this)"
+                            >1</span
+                          >
+                          <input
+                            type="number"
+                            id="edit-lainaaika"
+                            class="hidden text-primary-100"
+                            value="1"
+                            onblur="updateLainaaika(this)"
+                          />
+                        </span>
+                      </label>
+                      <div class="slide">
+                        <div class="form-group" style="margin-bottom: 8px">
+                          <div class="slider-lainaaika" data-value="1"></div>
+                          <input
+                            type="hidden"
+                            id="sliderSecond"
+                            name="secondSlider"
+                            value="0"
+                          />
+                        </div>
+                        <div class="wp-lainata-amount-wrap">
+                          <span class="slider-fixed-info"
+                            >You can get up to $70,000 loan.</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="wp-lainata-loan-plan">
+                      <div class="wp-lainata-text-holder">
+                        <div class="title-amount-wrapper">
+                          <div class="left-content">
+                            <strong class="title text"
+                              >Arvioitu kuukausierä</strong
+                            >
+                            <p class="para">Kuukausilyhennys alkaen</p>
+                          </div>
+                          <div class="amount-container">
+                            <span
+                              class="main-amount wp-lainata-amount"
+                              id="plc_monthly"
+                              >€ 342</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wp-lainata-list-area">
+                        <div class="wp-lainata-btn-holder">
+                          <button
+                            type="button"
+                            class="text-white w-full bg-slider hover:bg-slider_secondary focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                            onclick="wp_lainata_show_loan_form()"
+                          >
+                            Hae heti
+                          </button>
+                        </div>
+                        <ul class="max-w-xs pt-10">
+                          <li class="flex items">
+                            <div class="icon-circle">
+                              <i class="fa-solid fa-check"></i>
+                            </div>
+                            Kattava vertailu
+                          </li>
+                          <li class="flex items-center">
+                            <div class="icon-circle">
+                              <i class="fa-solid fa-check"></i>
+                            </div>
+                            Kilpailukykyiset korot
+                          </li>
+                          <li class="flex items-center">
+                            <div class="icon-circle">
+                              <i class="fa-solid fa-check"></i>
+                            </div>
+                            Helppo hakemus
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="wp-lainata-form-text">
+                      <p>
+                        Example of loan costs: The loan amount is
+                        <span>€ 15,000 </span> , the nominal interest rate is
+                        <span> 6 %</span> . The repayment period in the example
+                        is <span> 20 </span> years, the account management fee
+                        is €5, the opening fee is €30. The total amount to be
+                        repaid is <span> € 26991.52 </span>, making the monthly
+                        loan payment <span>€ 112.46 </span> . Loan amounts
+                        <span> €1,000 – €70,000</span>, repayment 1-20 years.
+                        The nominal interest rate is <span> 4% – 20%</span> and
+                        the annual loan costs area <span> €0 – €150</span>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="wp-lainata-col-left"
+                  id="wp-lainata-section-form"
+                  style="display: none"
+                >
+                  <form>
+                    <div class="wp-lainata-form-block">
+                      <div class="wp-lainata-form-wrap">
+                        <strong class="wp-lainata-form-head pb-8"
+                          >Syötä tiedot lainahakemusta varten</strong
+                        >
+                        <div class="wp-lainata-field-area">
+                          <label
+                            class="wp-lainata-form-label"
+                            for="loan_business"
+                            >Y-tunnus</label
+                          >
+                          <div class="input-container">
+                            <input
+                              type="text"
+                              id="loan_business"
+                              name="business"
+                              maxlength="9"
+                              placeholder="Anna Y-tunnus"
+                              class="wp-lainata-form-contron block w-full border-2 text-md text-primary-400 placeholder-gray-400 border-gray-400"
+                              oninput="formatBusinessId(this)"
+                              onpaste="setTimeout(() => formatBusinessId(this), 0)"
+                            />
+                            <i class="fa-solid fa-briefcase input-icon"></i>
+                          </div>
+                        </div>
+                        <div class="wp-lainata-field-area">
+                          <label class="wp-lainata-form-label" for="loan_email"
+                            >Sähköposti</label
+                          >
+                          <div class="input-container">
+                            <input
+                              type="text"
+                              id="loan_email"
+                              name="email"
+                              autocomplete="email"
+                              placeholder="Anna sähköpostiosoitteesi"
+                              class="wp-lainata-form-contron block w-full border-2 text-md text-primary-400 placeholder-gray-400 border-gray-400"
+                            />
+                            <i class="fa-solid fa-envelope input-icon"></i>
+                          </div>
+                        </div>
+                        <div class="wp-lainata-checkbox-area">
+                          <div class="flex items-center mb-4">
+                            <input
+                              id="loan_term"
+                              type="checkbox"
+                              value=""
+                              class="w-4 h-4 text-red-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            />
+                            <label
+                              for="loan_term"
+                              class="ml-2 text-sm font-medium"
+                              >Hyväksyn palvelun
+                              <a
+                                href="/palveluehdot-rekisteriseloste/"
+                                target="_blank"
+                                class="text-primary-200 dark:text-primary-200 hover:text-primary-300"
+                                >ehdot ja tietosuojakäytännön</a
+                              ></label
+                            >
+                          </div>
+                          <div class="flex items-center mb-4">
+                            <input
+                              id="loan_agree"
+                              type="checkbox"
+                              value=""
+                              class="w-4 h-4 text-red-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            />
+                            <label
+                              for="loan_agree"
+                              class="ml-2 text-sm font-medium"
+                              >Sallin yrityslainaamo.fi palvelun käsittelevän
+                              tietoni ja olevan yhteydessä lainatarjouksiin
+                              liittyen</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wp-lainata-buttons">
+                        <button
+                          type="button"
+                          class="btn rounded-full btn-outline-primary btn-cancel w-full font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                          onclick="wp_lainata_show_loan_slider()"
+                        >
+                          Takaisin
+                        </button>
+                        <button
+                          type="button"
+                          id="btn_loan_apply"
+                          class="text-white w-full bg-slider hover:bg-slider_secondary focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                          onclick="check_business()"
+                        >
+                          Jatka
+                        </button>
+                      </div>
+                      <div
+                        class="text-red-600 hidden text-center"
+                        id="error_msg"
+                      ></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      var cur_amount = 15000;
+      var cur_time = 8;
+      var cur_business_amount = 120000;
+      var cur_business_time = 24;
+      var loan_type = 'business';
+    </script>
+    <!-- footer JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+
+    <script>
+      var min_amount = 500;
+      var max_amount = 10000000;
+      var min_time = 1;
+      var max_time = 48;
+    </script>
+
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/aos/aos.js"></script>
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/inline-svg/inline-svg.min.js"></script>
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/js/main.js"></script>
+
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/js/jquery-3.7.1.min.js"></script>
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/js/jquery.touchSwipe.min.js"></script>
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/js/jquery.waypoints.min.js"></script>
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/js/lozad.min.js"></script>
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/js/slider-business.min.js"></script>
+    <script src="https://yrityslainaamo.fi/uty-content/themes/theme3/js/custom.js"></script>
+  </body>
+</html>

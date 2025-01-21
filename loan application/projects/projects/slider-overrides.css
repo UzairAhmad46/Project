@@ -1,0 +1,986 @@
+/* font family which you have used */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Inter', sans-serif;
+  color: var(--wp-lainata-brown-black);
+}
+
+/* Variables */
+:root {
+  --wp-lainata-green: #008f4d;
+  --wp-lainata-orange: #f47a2b;
+  --wp-lainata-gray: #f5f5f5;
+  --wp-lainata-dark-gray: #626262;
+  --wp-lainata-white: #fff;
+  --wp-lainata-brown-black: #1c1d27;
+}
+
+/* General Wrapper */
+#wp-lainata-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+.wp-lainata-container {
+  max-width: 1376px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Button Styles */
+.wp-lainata-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: var(--wp-lainata-white);
+  border: 1px solid var(--wp-lainata-green);
+  min-width: 273px;
+  background-color: var(--wp-lainata-green);
+  border-radius: 24px;
+  transition: all 0.4s ease;
+}
+
+.wp-lainata-btn:hover {
+  background-color: var(--wp-lainata-orange);
+  border-color: var(--wp-lainata-orange);
+}
+
+.wp-lainata-btn.wp-lainata-btn-outline {
+  background: none;
+  color: var(--wp-lainata-green);
+}
+
+.wp-lainata-btn.wp-lainata-btn-outline:hover {
+  background: var(--wp-lainata-green);
+  color: var(--wp-lainata-white);
+  border-color: var(--wp-lainata-green);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--wp-lainata-orange);
+  color: var(--wp-lainata-orange);
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Labels */
+.wp-lainata-label {
+  /* margin: 30px 30px 30px 30px; */
+  margin: 30px;
+}
+.wp-lainata-left-amount {
+  font-size: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px 10px 10px;
+}
+.wp-lainata-right-amount {
+  margin-left: 200px;
+  font-size: 50px;
+  font-weight: bold;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sliders */
+.slide {
+  margin-top: 10px;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+li {
+  align-items: center;
+  padding: 0 10px;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  border: #f47a2b solid 1px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.icon-circle i {
+  color: #f47a2b; /* White color for the icon */
+  font-size: 14px;
+}
+
+.slider-lainasumma {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Responsive Logo */
+@media (max-width: 767px) {
+  .wp-lainata-logo a {
+    margin: 0 auto;
+    max-width: 180px;
+  }
+}
+
+.wp-lainata-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Two Column Layout */
+.wp-lainata-two-col {
+  padding: 32px 0;
+}
+
+@media (max-width: 767px) {
+  .wp-lainata-two-col {
+    padding: 16px 0 0;
+  }
+}
+
+.wp-lainata-two-col .wp-lainata-cols-wrap {
+  display: flex;
+  margin: 0 -10px;
+}
+
+@media (max-width: 767px) {
+  .wp-lainata-two-col .wp-lainata-cols-wrap {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+}
+
+.wp-lainata-two-col .wp-lainata-col-left {
+  width: 47%;
+  padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+  .wp-lainata-two-col .wp-lainata-col-left {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.wp-lainata-two-col .wp-lainata-col-right {
+  width: 50%;
+  padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+  .wp-lainata-two-col .wp-lainata-col-right {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.wp-lainata-two-col .wp-lainata-loan-area {
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 58px 50px 20px 41px;
+}
+
+@media (max-width: 1199px) {
+  .wp-lainata-two-col .wp-lainata-loan-area {
+    padding: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .wp-lainata-two-col .wp-lainata-loan-area {
+    padding: 20px 0;
+  }
+}
+
+.wp-lainata-two-col .wp-lainata-loan-area p {
+  margin: 0 0 40px;
+}
+
+@media (max-width: 767px) {
+  .wp-lainata-two-col .wp-lainata-loan-area p {
+    margin: 0 0 20px;
+  }
+}
+
+.wp-lainata-two-col h1 {
+  font-size: 36px;
+  line-height: 41px;
+  margin: 0 0 30px;
+  font-weight: 700;
+  color: var(--wp-lainata-orange);
+}
+
+@media (max-width: 1199px) {
+  .wp-lainata-two-col h1 {
+    margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wp-lainata-two-col h1 {
+    margin: 0 0 10px;
+  }
+}
+
+/* Form Styles */
+.wp-lainata-form {
+  background: var(--wp-lainata-white);
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  box-shadow: -2px 4px 29px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 14px 24px 24px;
+}
+
+@media (max-width: 1199px) {
+  .wp-lainata-form {
+    padding: 14px 12px;
+  }
+}
+
+/* Range Input */
+.jcf-range {
+  display: inline-block;
+  min-width: 100%;
+  width: 130px;
+}
+
+.jcf-range .jcf-range-track {
+  margin: 0 20px 0 0;
+  position: relative;
+  display: block;
+  height: 8px;
+}
+
+.jcf-range .jcf-range-wrapper {
+  position: relative;
+  background: #e5e5e5;
+  border-radius: 5px;
+  display: block;
+  margin: 0 0 3px;
+}
+
+.jcf-range.jcf-vertical {
+  min-width: 0;
+  width: auto;
+}
+
+.jcf-range.jcf-vertical .jcf-range-wrapper {
+  margin: 0;
+  width: 10px;
+  height: auto;
+  padding: 20px 0 0;
+}
+
+.jcf-range.jcf-vertical .jcf-range-track {
+  height: 180px;
+  width: 10px;
+}
+
+.jcf-range.jcf-vertical .jcf-range-handle {
+  left: -5px;
+}
+
+.jcf-range .jcf-range-display-wrapper {
+  position: absolute;
+  min-height: 10px;
+  min-width: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.jcf-range .jcf-range-display {
+  border-radius: 5px;
+  position: absolute;
+  background: var(--wp-lainata-green);
+  width: 10px;
+  height: 10px;
+}
+
+.jcf-range .jcf-range-handle {
+  position: absolute;
+  background: var(--wp-lainata-white);
+  border-radius: 19px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 20px;
+  height: 20px;
+  margin: -8px 0 0;
+  top: 0;
+  left: 0;
+}
+
+.jcf-range .jcf-active-handle {
+  z-index: 2;
+}
+
+.jcf-range.jcf-disabled {
+  background: none !important;
+  opacity: 0.3;
+}
+
+/* Range Value Display */
+.jcf-range-value {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  background: var(--wp-lainata-green);
+  color: var(--wp-lainata-white);
+  padding: 5px;
+  transform: translate(-50%, 0);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1;
+  min-width: 60px;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.jcf-range-value:after {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  content: '';
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: var(--wp-lainata-green) transparent transparent transparent;
+  transform: translate(-50%, 0);
+}
+
+/* Slider Styling */
+.noUi-horizontal {
+  height: 10px;
+}
+
+.noUi-background {
+  background-color: var(--wp-lainata-orange);
+}
+
+.noUi-origin {
+  background: #e5e5e5;
+}
+
+.noUi-horizontal .noUi-handle {
+  position: absolute;
+  background: #fff;
+  border-radius: 19px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 25px;
+  height: 25px;
+  left: -10px;
+  top: -9px;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+
+.noUi-horizontal .noUi-handle:focus-visible {
+  outline: none;
+}
+
+.wp-lainata-text-holder {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin: 2.5rem;
+}
+
+.wp-lainata-text-holder .title-amount-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 550px;
+  box-sizing: border-box;
+  height: 103px;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: 'Inter', sans-serif;
+  gap: 12px;
+  background-color: #f7f7f7;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #344054;
+  font-family: 'Inter', sans-serif;
+}
+
+.wp-lainata-amount {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+}
+
+span.amount {
+  color: #ee6826 !important;
+  font-size: 50px !important;
+  font-weight: 600 !important;
+}
+
+.wp-lainata-form-text {
+  margin-top: 3rem;
+}
+
+.wp-lainata-form-text span {
+  color: #ee6826;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -2%;
+}
+
+span.period {
+  color: #00000066 !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+}
+
+.left-content p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #475467;
+}
+
+.wp-lainata-text-holder .left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wp-lainata-text-holder .left-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.wp-lainata-text-holder .title,
+.wp-lainata-text-holder .wp-lainata-amount,
+.wp-lainata-text-holder p {
+  margin: 5px 0;
+}
+
+.amount-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.main-amount {
+  color: #ee6826;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.per-month {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Inter', sans-serif;
+}
+
+.wp-lainata-text-holder .left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container input {
+  padding-left: 40px; /* Make space for the icon */
+}
+
+.input-container .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #475467;
+  pointer-events: none;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .wp-lainata-text-holder .title-amount-wrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .left-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .amount-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .main-amount {
+    font-size: 40px;
+  }
+
+  .wp-lainata-form {
+    padding: 16px;
+    margin: 10px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  .input-container {
+    margin-bottom: 15px;
+  }
+
+  .wp-lainata-label {
+    margin: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wp-lainata-right-amount {
+    margin-left: 0;
+    font-size: 36px;
+  }
+
+  .wp-lainata-left-amount {
+    margin: 5px;
+  }
+
+  .tabs {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .tab {
+    padding: 10px 15px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .wp-lainata-form {
+    padding: 12px;
+    margin: 5px;
+  }
+
+  .tabs {
+    padding: 0 5px;
+  }
+
+  .tab {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .wp-lainata-text-holder {
+    margin: 1rem;
+  }
+
+  .title-amount-wrapper {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .main-amount {
+    font-size: 28px;
+  }
+
+  .wp-lainata-form-text span {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .wp-lainata-right-amount {
+    font-size: 28px;
+  }
+
+  .wp-lainata-left-amount {
+    font-size: 16px;
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .wp-lainata-form-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .input-container input {
+    font-size: 14px;
+    padding: 10px 10px 10px 35px;
+    height: 40px;
+  }
+
+  .wp-lainata-form-label {
+    font-size: 14px;
+  }
+
+  .wp-lainata-form-head {
+    font-size: 16px;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wp-lainata-text-holder .title-amount-wrapper {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .wp-lainata-right-amount {
+    margin-left: 100px;
+    font-size: 40px;
+  }
+
+  .wp-lainata-label {
+    margin: 20px;
+  }
+
+  .wp-lainata-form {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wp-lainata-text-holder .title-amount-wrapper {
+    padding: 15px;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .wp-lainata-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px 10px;
+  }
+
+  .wp-lainata-right-amount {
+    margin-left: 0;
+    font-size: 32px;
+  }
+
+  .wp-lainata-left-amount {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  ul.max-w-xs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  li.flex {
+    justify-content: flex-start;
+  }
+
+  .wp-lainata-form-text p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .wp-lainata-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wp-lainata-buttons button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .wp-lainata-form {
+    padding: 12px;
+    margin: 5px;
+  }
+
+  .tabs {
+    padding: 0 5px;
+  }
+
+  .tab {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .wp-lainata-text-holder {
+    margin: 1rem;
+  }
+
+  .title-amount-wrapper {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .main-amount {
+    font-size: 28px;
+  }
+
+  .wp-lainata-form-text span {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .wp-lainata-checkbox-area label {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .input-container input {
+    font-size: 13px;
+    padding: 8px 8px 8px 32px;
+    height: 40px;
+  }
+
+  .wp-lainata-form-label {
+    font-size: 13px;
+  }
+
+  .wp-lainata-form-head {
+    font-size: 16px;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wp-lainata-form {
+    padding: 10px;
+  }
+
+  .tab {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .wp-lainata-right-amount {
+    font-size: 24px;
+  }
+
+  .wp-lainata-left-amount {
+    font-size: 14px;
+  }
+
+  .main-amount {
+    font-size: 24px;
+  }
+
+  .wp-lainata-form-text p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .input-container .input-icon {
+    font-size: 12px;
+    left: 8px;
+  }
+
+  .wp-lainata-buttons button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+/* Responsive styles for loan slider */
+@media (max-width: 1024px) {
+  .wp-lainata-label {
+    margin: 20px;
+  }
+
+  .wp-lainata-right-amount {
+    margin-left: 100px;
+    font-size: 40px;
+  }
+
+  .wp-lainata-left-amount {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wp-lainata-label {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wp-lainata-right-amount {
+    margin-left: 0;
+    font-size: 32px;
+  }
+
+  .wp-lainata-left-amount {
+    font-size: 16px;
+  }
+
+  .wp-lainata-form-text p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  ul.max-w-xs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wp-lainata-list-area li {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  .wp-lainata-right-amount {
+    font-size: 28px;
+  }
+
+  .wp-lainata-left-amount {
+    font-size: 14px;
+  }
+
+  .wp-lainata-form {
+    padding: 10px;
+  }
+
+  .wp-lainata-btn {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .wp-lainata-amount-wrap {
+    text-align: center;
+  }
+
+  .slider-fixed-info {
+    font-size: 12px;
+  }
+}
+
+/* Fix for slider on touch devices */
+@media (hover: none) {
+  .noUi-handle {
+    width: 30px;
+    height: 30px;
+    top: -12px;
+  }
+
+  .slider-lainasumma,
+  .slider-lainaaika {
+    height: 12px;
+  }
+}
+
+/* Improve form field focus states */
+.input-container input:focus {
+  border-color: var(--wp-lainata-orange);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(244, 122, 43, 0.2);
+}
+
+/* Improve button touch targets */
+@media (max-width: 768px) {
+  button {
+    min-height: 44px;
+  }
+
+  .icon-circle {
+    width: 24px;
+    height: 24px;
+  }
+}
