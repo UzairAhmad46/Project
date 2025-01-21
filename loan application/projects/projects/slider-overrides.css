@@ -30,6 +30,8 @@ body {
   max-width: 1376px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Button Styles */
@@ -982,5 +984,61 @@ form {
   .icon-circle {
     width: 24px;
     height: 24px;
+  }
+}
+
+.container {
+  max-width: 1376px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lg\:col-6 {
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .lg\:col-6 {
+    width: 100%;
+  }
+  
+  .row {
+    justify-content: center;
+  }
+}
+
+#slider_section .container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#slider_section .row.items-center {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#slider_section .mx-auto.md\:pt-24.sm\:pt-0.lg\:col-6.lg\:pt-0 {
+  width: 50%;
+  margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+  #slider_section .mx-auto.md\:pt-24.sm\:pt-0.lg\:col-6.lg\:pt-0 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  #slider_section .row.items-center {
+    justify-content: center;
   }
 }
